@@ -15,5 +15,6 @@ def usr_input():
     if spcl == 0:
         return
     else:
-        return
+        print(dataset + buck)
     #....
+

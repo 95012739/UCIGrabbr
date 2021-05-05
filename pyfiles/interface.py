@@ -13,8 +13,9 @@ def usr_input():
     buck = str(input("\nWhat Bucket: "))
     spcl = int(input("\nAny Special Instructions? Type 0 if none: "))
     if spcl == 0:
-        return
+        instructions = 0
     else:
-        print(dataset + buck)
+        instructions = 0
     #....
+    return(dataset, buck, instructions)
 

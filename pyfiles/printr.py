@@ -3,10 +3,26 @@ import boto3
 import pandas
 import beautifulsoup4
 import requests
+import functools
+
+def compose(*funcs):
+    """
+    Functional composition
+    
+    [f, g, h] will be f(g(h(x)))
+    """
+    def compose_two(f, g):
+        def c(x):
+            return f(g(x))
+        return c
+    return functools.reduce(compose_two, funcs)
 
 #pick one
 s3_client = boto3.client('s3')
 s3_resource = boto3.resource('s3')
+
+def doit(df, buck):
+    reate_bucket(buck, s3_connection)
 
 
 #creates an S3 bucket name 

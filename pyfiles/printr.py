@@ -18,12 +18,14 @@ def compose(*funcs):
     return functools.reduce(compose_two, funcs)
 
 #pick one
-s3_client = boto3.client('s3')
-s3_resource = boto3.resource('s3')
+
+
 
 def doit(df, buck):
-    reate_bucket(buck, s3_connection)
-
+    create_bucket(buck, s3_connection)
+    s3_client = boto3.client('s3')
+        Filename=data, Bucket=buck, #or create_bucket_name(buck)
+        Key=first_file_name) #?
 
 #creates an S3 bucket name 
 def create_bucket_name(bucket_prefix):
@@ -48,17 +50,5 @@ def create_bucket(bucket_prefix, s3_connection):
 
 #upload file with one of below
 #object
-s3_resource.Object(first_bucket_name, first_file_name).upload_file(
-    Filename=first_file_name)
-
-#first object
-first_object.upload_file(first_file_name)
-
-#resource
-s3_resource.Bucket(first_bucket_name).upload_file(
-    Filename=first_file_name, Key=first_file_name)
 
 #client
-s3_resource.meta.client.upload_file(
-    Filename=first_file_name, Bucket=first_bucket_name,
-    Key=first_file_name)

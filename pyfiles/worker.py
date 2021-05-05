@@ -12,15 +12,19 @@ known = 1
 sys.path.append("UCIGrabbr/uci/UCI-ML-API")
 
 from UCI_ML_Functions import *
-name = "adult"
-directory = "lcldata"
 
-if known ==1:
-    name = name.replace(" ", "+") 
-    url = "https://archive.ics.uci.edu/ml/machine-learning-databases/" + name +"/"
+def datagrabbr(name):   
+    directory = "lcldata"
 
-    download_dataset_url(url,directory,msg_flag=True,download_flag=True)
-else:
-    download_dataset_name(name,msg_flag=True,download_flag=True)
+    try:
+        name = name.replace(" ", "+") 
+        url = "https://archive.ics.uci.edu/ml/machine-learning-databases/" + name +"/"
+
+        download_dataset_url(url,directory,msg_flag=True,download_flag=True)
+    except:
+        download_dataset_name(name,msg_flag=True,download_flag=True)
+
+    #Get to a pd df
+    return(dataframe)
 #data is stored in a folder cwd/name
 #need to clean and do other stuff

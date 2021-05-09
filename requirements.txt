@@ -4,3 +4,8 @@ requests
 boto3
 uuid
 uvicorn
+uuid
+os
+sys
+
+functools

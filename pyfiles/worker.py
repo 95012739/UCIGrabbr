@@ -1,7 +1,7 @@
 #Does anything including the name, ie Adult gets Adult and Autism Screening Adult
 
 
-from bs4 import BeautifulSoup
+"""from bs4 import BeautifulSoup
 import pandas as pd
 import requests
 import os
@@ -11,7 +11,7 @@ known = 1
 #problem is in mkdir statement, directory that;s passed is an issue
 sys.path.append("UCIGrabbr/uci/UCI-ML-API")
 
-from UCI_ML_Functions import *
+from UCI_ML_Functions import *"""
 
 def datagrabbr(name):   
     directory = "lcldata"

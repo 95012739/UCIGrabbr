@@ -1,5 +1,6 @@
 
-
+import uuid as ud
+import boto3 as b3
 
 
 def doit(df, buck, object_name = None):
@@ -10,7 +11,8 @@ def doit(df, buck, object_name = None):
     if object_name is None:
         object_name = "file"
 
-    response = s3_client.upload_file(df, bucket_name, object_name)
+    #could do try and except ie already have name etc.
+    s3_client.upload_file(df, bucket_name, object_name)
 
     return True
 

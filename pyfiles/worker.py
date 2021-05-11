@@ -7,8 +7,8 @@ import requests
 import os
 import sys
 
-#/Users/zacharysegal/UCIGrabbr/uci
-from uci.UCIAPI.UCIMLFunctions import * #download_dataset_url, download_dataset_name
+
+from pyfiles.uci import * #download_dataset_url, download_dataset_name
 #from UCIMLFunctions import *
 known = 1
 
@@ -21,7 +21,7 @@ def datagrabbr(name):
 
         download_dataset_url(url,directory,msg_flag=True,download_flag=True)
     except:
-        download_dataset_name(name,msg_flag=True,download_flag=True)
+        pyfiles.uci.download_dataset_name(name,msg_flag=True,download_flag=True)
 
     #Get to a pd df
     return(dataframe)

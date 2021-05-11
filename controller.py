@@ -6,7 +6,7 @@ import pandas
 import bs4 #beautifulsoup4
 import requests
 
-import pyfiles.interface
+from pyfiles.interface import*
 import pyfiles.worker 
 import pyfiles.printr 
 import logging

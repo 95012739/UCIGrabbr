@@ -7,6 +7,7 @@ import requests
 import os
 import sys
 
+#/Users/zacharysegal/UCIGrabbr/uci
 from uci.UCIAPI.UCIMLFunctions import * #download_dataset_url, download_dataset_name
 #from UCIMLFunctions import *
 known = 1

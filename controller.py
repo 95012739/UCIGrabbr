@@ -7,8 +7,8 @@ import bs4 #beautifulsoup4
 import requests
 
 from pyfiles.interface import*
-import pyfiles.worker 
-import pyfiles.printr 
+from pyfiles.worker import*
+from pyfiles.printr import*
 import logging
 from botocore.exceptions import ClientError
 #pyfiles/interface.py
@@ -19,10 +19,10 @@ local_directory = cwd + "/uci" + str(directory)
 
 os.makedirs(local_directory)"""
 
-dataset, buck, instructions = pyfiles.interface.usr_input()
+dataset, buck, instructions = interface.usr_input()
 
-data = pyfiles.worker.datagrabbr(dataset)
+data = worker.datagrabbr(dataset)
 
-pyfiles.printr.doit(data, buck)
+printr.doit(data, buck)
 
 

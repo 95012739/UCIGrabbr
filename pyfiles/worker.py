@@ -10,8 +10,8 @@ import sys
 
 import io
 
-
-from pyfiles.uci import * #download_dataset_url, download_dataset_name
+#pyfiles.
+from uci import * #download_dataset_url, download_dataset_name
 #from uci import *
 known = 1
 
@@ -22,12 +22,11 @@ def datagrabbr(name):
         name = name.replace(" ", "+") 
         url = "https://archive.ics.uci.edu/ml/machine-learning-databases/" + name +"/"
 
-        download_dataset_url(url,directory,msg_flag=True,download_flag=True)
+        uci.download_dataset_url(url,directory,msg_flag=True,download_flag=True)
     except:
-        pyfiles.uci.download_dataset_name(name,msg_flag=True,download_flag=True)
-
+        print("Type the right name in")
     #Get to a pd df
-    return(dataframe)
+
 datagrabbr("seeds")
 #data is stored in a folder cwd/name
 #need to clean and do other stuff

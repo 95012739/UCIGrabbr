@@ -19,10 +19,10 @@ local_directory = cwd + "/uci" + str(directory)
 
 os.makedirs(local_directory)"""
 
-dataset, buck, instructions = interface.usr_input()
+dataset, buck, instructions = pyfiles.interface.usr_input()
 
-data = worker.datagrabbr(dataset)
+data = pyfiles.worker.datagrabbr(dataset)
 
-printr.doit(data, buck)
+pyfiles.printr.doit(data, buck)
 
 

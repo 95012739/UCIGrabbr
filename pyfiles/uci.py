@@ -1,4 +1,6 @@
 import pandas as pd
+import io
+import requests
 
 url="https://archive.ics.uci.edu/ml/datasets.html"
 
@@ -70,6 +72,9 @@ def download_file(url, directory):
             for chunk in r.iter_content(chunk_size=1024):
                 if chunk:  # filter out keep-alive new chunks
                     f.write(chunk)
+
+        r = requests.get(url)  
+        df = pd.read_csv(io.StringIO(r.text))
     except:
         print("Sorry could not write this particular file!")
         # f.flush()

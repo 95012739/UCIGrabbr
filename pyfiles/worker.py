@@ -10,23 +10,21 @@ import sys
 
 import io
 
-#pyfiles.
-from uci import * #download_dataset_url, download_dataset_name
-#from uci import *
+
 known = 1
 
 def datagrabbr(name):   
-    directory = "lcldata"
+    url = "https://data.world/alexandra/" + name
 
     try:
-        name = name.replace(" ", "+") 
-        url = "https://archive.ics.uci.edu/ml/machine-learning-databases/" + name +"/"
-
-        uci.download_dataset_url(url,directory,msg_flag=True,download_flag=True)
+        urlData = requests.get(url).content
+        df = pd.read_csv(io.StringIO(urlData.decode('utf-8')))
+        df = pd.DataFrame(df)
+        return(df)
+        
     except:
         print("Type the right name in")
     #Get to a pd df
 
-datagrabbr("seeds")
-#data is stored in a folder cwd/name
-#need to clean and do other stuff
+
+#print(datagrabbr("chord-progressions").head(3))

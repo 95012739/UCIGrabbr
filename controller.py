@@ -6,23 +6,18 @@ import pandas
 import bs4 #beautifulsoup4
 import requests
 
-from pyfiles.interface import*
-from pyfiles.worker import*
-from pyfiles.printr import*
+import pyfiles.interface as intrf
+import pyfiles.worker as wrkr
+import pyfiles.printr as prntr
 import logging
 from botocore.exceptions import ClientError
-#pyfiles/interface.py
-#UCIGRABBR.pyfiles.
-"""directory = "seeds"
-cwd = os.getcwd()
-local_directory = cwd + "/uci" + str(directory)
 
-os.makedirs(local_directory)"""
 
-dataset, buck, instructions = interface.usr_input()
+dataset, buck, instructions = intrf.usr_input()
+print(dataset)
+print(instructions)
+data = wrkr.datagrabbr(dataset)
 
-data = worker.datagrabbr(dataset)
-
-printr.doit(data, buck)
+#prntr.doit(data, buck)
 
 

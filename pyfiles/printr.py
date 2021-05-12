@@ -23,12 +23,3 @@ def create_bucket_name(bucket_prefix):
     return ''.join([bucket_prefix, str(ud.uuid4())])
 
 
-
-#input name
-#create bucket bucket name
-#file path
-
-#upload file with one of below
-#object
-
-#client

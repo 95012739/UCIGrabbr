@@ -11,11 +11,11 @@
 def usr_input():
     dataset=str(input("\nWhat Dataset: "))
     buck = str(input("\nWhat Bucket: "))
-    spcl = int(input("\nAny Special Instructions? Type 0 if none: "))
-    if spcl == 0:
-        instructions = 0
-    else:
-        instructions = 0
+    #spcl = int(input("\nAny Special Instructions? Type 0 if none: "))
+    #if spcl == 0:
+    #    instructions = 0
+    #else:
+    #    instructions = 0
     #....
-    return(dataset, buck, instructions)
+    return(dataset, buck)
 

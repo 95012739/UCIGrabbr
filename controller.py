@@ -1,10 +1,3 @@
-#move to place they should be
-import os
-import uuid as ud
-import boto3 as b3
-import pandas
-import bs4 #beautifulsoup4
-import requests
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel

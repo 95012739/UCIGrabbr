@@ -4,17 +4,8 @@ requests
 boto3
 uuid
 uvicorn
-uuid
-os
-sys
+
+pydantic
 fastapi
 rq
 redis
-"""#8 26624.8 Collecting boto3
-#8 26624.9   Downloading boto3-1.17.76-py2.py3-none-any.whl (131 kB)
-#8 26624.9 Collecting uuid
-#8 26625.0   Downloading uuid-1.30.tar.gz (5.8 kB)
-#8 26625.3 Collecting uvicorn
-#8 26625.3   Downloading uvicorn-0.13.4-py3-none-any.whl (46 kB)
-------
-executor failed running [/bin/sh -c pip install -r requirem"""

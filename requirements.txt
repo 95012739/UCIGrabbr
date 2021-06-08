@@ -1,10 +1,8 @@
 beautifulsoup4
-pandas
 requests
 boto3
 uuid
 uvicorn
-
 pydantic
 fastapi
 rq

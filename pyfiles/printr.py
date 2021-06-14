@@ -7,7 +7,7 @@ def doit(df, buck, object_name = None):
     df = pandas.DataFrame(df)
     cwd = os.getcwd()
 
-    path = cwd + "\muhdata.csv"
+    path = cwd + "\mojdata.csv"
 
     if os.path.exists(path):
         os.remove(path)

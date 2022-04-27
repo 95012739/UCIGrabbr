@@ -1,21 +1,12 @@
 #instructions
 
-#What Dataset
-#Bucket name 
-    # - can this be an existing bucket
+    #What Dataset
+    #Bucket name 
 
-#How much data? What columns?
-
-#Call interact?
 
 def usr_input():
     dataset=str(input("\nWhat Dataset: "))
     buck = str(input("\nWhat Bucket: "))
-    #spcl = int(input("\nAny Special Instructions? Type 0 if none: "))
-    #if spcl == 0:
-    #    instructions = 0
-    #else:
-    #    instructions = 0
-    #....
+
     return(dataset, buck)
 
